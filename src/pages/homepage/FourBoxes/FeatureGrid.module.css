@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet ');
+
+.container {
+  width: 100%;
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 20px;
+}
+
+.headerContainer {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  font-family: 'Raleway', sans-serif;
+  margin: 2px;
+}
+
+.subtitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  font-family: 'Raleway', sans-serif;
+  margin: 2px;
+}
+
+.description {
+  font-size: 23px;
+  font-weight: 400;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.125rem;
+  /* Micro gap of 2px */
+}
+
+.card {
+  /* border-radius: 1rem; */
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  aspect-ratio: 1.35;
+  height: 200px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.iconContainer {
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Color variants */
+.yellowBg {
+  background-color: #f7f8a0;
+}
+
+.emeraldBg {
+  background-color: #40d5a1;
+}
+
+.blueBg {
+  background-color: #4d95ff;
+}
+
+.pinkBg {
+  background-color: #ff7aa2;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.125rem;
+    /* Consistent micro gap for both directions */
+  }
+}

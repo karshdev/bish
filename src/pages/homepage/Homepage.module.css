@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet ');
+
+.container {
+  height: 117vh;
+  width: 100%;
+  background-color: #FB2A6333;
+}
+
+.herosection {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid red; */
+}
+
+.rightSection {
+  height: 95%;
+  width: 86%;
+  position: relative;
+  /* border: 2px solid black; */
+}
+
+.shadow {
+  height: 100%;
+  width: 100%;
+  /* object-fit: contain; */
+  /* display: block; */
+  /* border: 1px solid red; */
+}
+
+.overshadow {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 95%;
+  width: 98%;
+  /* display: block; */
+
+}
+
+.mobileImgContainer {
+  height: 84%;
+  width: 57%;
+  /* border: 2px solid red; */
+  position: absolute;
+  top: 15%;
+  left: 24%;
+
+}
+
+.mobileImg {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.leftSection {
+  height: 95%;
+  width: 40%;
+  /* border: 1px solid black; */
+}
+
+.textBox {
+  height: 250px;
+  width: 350px;
+  /* border: 2px solid black; */
+  position: absolute;
+  left: 12%;
+  top: 18%;
+  background-color: white;
+  z-index: 10;
+  border-radius: 4.5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.parent {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  padding-left: 8px;
+  margin-top: 9px;
+  margin: 11px 0px 0px 0px;
+  /* border: 1px solid red; */
+}
+
+.normalPara {
+  /* border: 1px solid green; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 12px;
+  padding: 10px;
+
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #f0f0f0; */
+  width: 29%;
+  height: auto;
+  margin-left: 11%;
+  bottom: 15%;
+  position: absolute;
+}
+
+.addressBox {
+  background-color: #ff3b7d;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.topText {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.findAddressButton {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  width: 93%;
+  padding-left: 62px;
+  /* text-align: center; */
+}
+
+.findAddressButton:hover {
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.arrow {
+  margin-left: 10px;
+}
+
+.bishCard3 {
+  position: absolute;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  /* padding: 24px; */
+  max-width: 400px;
+  margin-top: 3%;
+  text-align: left;
+  top: 80%;
+  left: 11%;
+  width: 28%;
+  padding: 12px;
+}
+
+.bishTitle3 {
+  color: black;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.bishDescription3 {
+  font-weight: 400;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+
+}
+
+.bishButton3 {
+  background-color: #FB2A63;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  width: 84%;
+  padding-left: 62px;
+}
+
+.bishButton3:hover {
+  background-color: #e0286a;
+}
+
+.bishArrow3 {
+  margin-left: 8px;
+  font-size: 18px;
+}

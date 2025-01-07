@@ -1,0 +1,212 @@
+.container {
+
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 90%;
+  /* border: 2px solid red; */
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1.5rem; */
+  /* border: 1px solid black; */
+  width: 75%;
+  margin-left: 65px;
+  padding: 20px;
+  background-color: #F5F5F580;
+}
+
+.mainTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111827;
+}
+
+.subtitle {
+  color: #ec4899;
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 25px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+.checkmarkContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.checkmark {
+  width: 4rem;
+  height: 4rem;
+  background-color: #4ade80;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkmarkIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: white;
+}
+
+.availabilitySection {
+  text-align: center;
+}
+
+.availabilityTitle {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.availabilityText {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-family: 'Raleway', sans-serif;
+  margin: 0px;
+}
+
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 108%;
+  margin-top: 10%;
+
+}
+
+
+.sectionTitle {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  padding-left: 15%;
+}
+
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordionItem {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 66%;
+  background-color: #F5F5F580;
+  box-shadow: 5px 5px 5px 5px whitesmoke;
+}
+
+.accordionItem:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.stepNumber {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+}
+
+.stepTitle {
+  font-weight: 600;
+  color: #111827;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+.chevron {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.chevronRotated {
+  transform: rotate(180deg);
+}
+
+.accordionContent {
+  /* margin-top: 0.5rem; */
+  padding-left: 2.25rem;
+  color: black;
+}
+
+/* Animation for accordion content */
+.accordionContent {
+  max-height: 0;
+  /* overflow: hidden; */
+  transition: max-height 0.3s ease-out;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.accordionContent.expanded {
+  max-height: 200px;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+}
+
+.checkmarkWrapper {
+  height: auto;
+  width: 100px;
+  /* border: 2px solid; */
+  margin: auto;
+}
+
+.checkmarkWrapper img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.stepContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
