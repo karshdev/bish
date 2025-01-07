@@ -5,7 +5,7 @@ import { MapPin, Clock, Wrench, Calendar } from 'lucide-react';
 const FeatureGrid2 = () => {
   const features = [
     {
-      icon: <MapPin size={40} />, // Reduced icon size
+      icon: <MapPin size={40} />,
       title: "Toilets and Sinks",
       bgColor: styles.yellowBg,
     },
@@ -17,36 +17,35 @@ const FeatureGrid2 = () => {
   ];
 
   return (
-    <div className={styles.container}>
-      <div className={styles.headerContainer}>
-        <h1 className={styles.title}>
+    <div className="w-full max-w-2xl mx-auto p-4">
+      <div className="text-center mb-10">
+        <h1 className="text-2xl font-extrabold font-raleway mb-2">
           Your home’s BISH! code saves you money on
-        </h1>
-        <h2 className={styles.subtitle}>
           all kinds of plumber jobs.
-        </h2>
-        <p className={styles.description}>
-          Plumbers available now. More
-          trades coming soon!
+        </h1>
+
+        <p className="text-lg font-raleway font-normal mx-6">
+          Plumbers available now. More trades coming soon!
         </p>
       </div>
 
-      <div className={styles.grid}>
+      <div className="grid grid-cols-2 gap-2">
         {features.map((feature, index) => (
           <div
             key={index}
-            className={`${styles.card} ${feature.bgColor}`}
+            className={`flex rounded-md flex-col items-center justify-center text-center p-4 transition-transform duration-200 aspect-[1.35] h-[200px] w-[170px] ${feature.bgColor}`}
           >
-            <div className={styles.iconContainer}>
-              <img src='Group 4721.png' className={styles.checkIcon}></img>
+            <div className="mb-4 w-full flex justify-center">
+              <img src="Group 4721.png" className="h-[60px] w-[60px] object-contain" />
             </div>
-            <h3 className={styles.cardTitle}>
+            <h3 className="text-xl font-semibold leading-tight font-raleway">
               {feature.title}
             </h3>
           </div>
         ))}
       </div>
     </div>
+
   );
 };
 

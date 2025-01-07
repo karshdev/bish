@@ -5,6 +5,7 @@ import MiddleLineLogo from './pages/homepage/Middle-line/MiddleLineLogo'
 import BookingUI from './pages/homepage/BookingUI/BookingUI'
 import FeatureGrid from './pages/homepage/FourBoxes/FeatureGrid'
 import FeatureGrid2 from './pages/homepage/FeatureGrid2/FeatureGrid2'
+import CheckPrice from './pages/homepage/CheckPrice/CheckPrice'
 
 function App() {
   // Dynamically inject Google Fonts
@@ -23,6 +24,7 @@ function App() {
       <FeatureGrid />
       <MiddleLineLogo />
       <FeatureGrid2 />
+      <CheckPrice />
 
     </>
   )

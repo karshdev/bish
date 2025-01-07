@@ -9,45 +9,50 @@ const BookingUI = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.grid}>
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left Section */}
-        <div className={styles.leftSection}>
-          <h1 className={styles.title}>
+        <div className="flex flex-col bg-gray-100 p-6 rounded-md">
+          <h1 className="text-2xl md:text-4xl font-bold text-gray-900">
             Experts to your door at your home's exclusive price for 2025
           </h1>
 
-          <p className={styles.subtitle}>
+          <p className="mt-4 text-lg text-pink-600">
             Why waste time searching for local tradespeople when a team of easy to book BISH! experts have been allocated to your home already?
           </p>
 
-          <div className={styles.checkmarkWrapper}>
-            <img src='Group 471.png'></img>
+          <div className="mt-2 flex justify-center">
+            <img src="Group 471.png" alt="Checkmark" className="h-16 w-16 object-contain" />
           </div>
 
-          <div className={styles.availabilitySection}>
-            <h2 className={styles.availabilityTitle}>Plumbers available!</h2>
-            <p className={styles.availabilityText}>More trades coming soon</p>
+          <div className="mt-2 text-center">
+            <h2 className="text-2xl font-semibold">Plumbers available!</h2>
+            <p className="text-lg">More trades coming soon</p>
           </div>
         </div>
 
         {/* Right Section */}
-        <div className={styles.rightSection}>
-          <h2 className={styles.sectionTitle}>Here's how it works</h2>
+        <div className="flex flex-col">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-center md:text-left">
+            Here's how it works
+          </h2>
 
           {/* Accordion Items */}
-          <div className={styles.accordionContainer}>
+          <div className="mt-4 space-y-4">
+            {/* Accordion Item 1 */}
             <div
-              className={styles.accordionItem}
+              className="bg-gray-100 p-4 rounded-md shadow cursor-pointer"
               onClick={() => handleItemClick(1)}
             >
-              <div className={styles.accordionHeader}>
-                <div className={styles.stepContainer}>
-                  <span className={styles.stepNumber}>1</span>
-                  <h3 className={styles.stepTitle}>Unlock your home's BISH! code</h3>
+              <div className="flex justify-between items-center">
+                <div className="flex items-center space-x-3">
+                  <span className="w-6 h-6 flex items-center justify-center border border-black text-sm">
+                    1
+                  </span>
+                  <h3 className="font-semibold">Unlock your home's BISH! code</h3>
                 </div>
                 <svg
-                  className={`${styles.chevron} ${expandedItem === 1 ? styles.rotate : ''}`}
+                  className={`w-6 h-6 transform transition-transform ${expandedItem === 1 ? 'rotate-180' : ''}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -56,23 +61,26 @@ const BookingUI = () => {
                 </svg>
               </div>
               {expandedItem === 1 && (
-                <p className={styles.accordionContent}>
+                <p className="mt-2 pl-8 text-sm text-black">
                   Find your address and get your home's BISH! code by SMS.
                 </p>
               )}
             </div>
 
+            {/* Accordion Item 2 */}
             <div
-              className={styles.accordionItem}
+              className="bg-gray-100 p-4 rounded-md shadow cursor-pointer"
               onClick={() => handleItemClick(2)}
             >
-              <div className={styles.accordionHeader}>
-                <div className={styles.stepContainer}>
-                  <span className={styles.stepNumber}>2</span>
-                  <h3 className={styles.stepTitle}>Call your local BISH! HQ</h3>
+              <div className="flex justify-between items-center">
+                <div className="flex items-center space-x-3">
+                  <span className="w-6 h-6 flex items-center justify-center border border-black text-sm">
+                    2
+                  </span>
+                  <h3 className="font-semibold">Call your local BISH! HQ</h3>
                 </div>
                 <svg
-                  className={`${styles.chevron} ${expandedItem === 2 ? styles.rotate : ''}`}
+                  className={`w-6 h-6 transform transition-transform ${expandedItem === 2 ? 'rotate-180' : ''}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -82,17 +90,20 @@ const BookingUI = () => {
               </div>
             </div>
 
+            {/* Accordion Item 3 */}
             <div
-              className={styles.accordionItem}
+              className="bg-gray-100 p-4 rounded-md shadow cursor-pointer"
               onClick={() => handleItemClick(3)}
             >
-              <div className={styles.accordionHeader}>
-                <div className={styles.stepContainer}>
-                  <span className={styles.stepNumber}>3</span>
-                  <h3 className={styles.stepTitle}>Same day or next day booking</h3>
+              <div className="flex justify-between items-center">
+                <div className="flex items-center space-x-3">
+                  <span className="w-6 h-6 flex items-center justify-center border border-black text-sm">
+                    3
+                  </span>
+                  <h3 className="font-semibold">Same day or next day booking</h3>
                 </div>
                 <svg
-                  className={`${styles.chevron} ${expandedItem === 3 ? styles.rotate : ''}`}
+                  className={`w-6 h-6 transform transition-transform ${expandedItem === 3 ? 'rotate-180' : ''}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -105,6 +116,7 @@ const BookingUI = () => {
         </div>
       </div>
     </div>
+
   );
 };
 

@@ -1,31 +1,17 @@
-import styles from './MiddleLineLogo.module.css';
 function MiddleLineLogo() {
   return (
-    <div className={styles.container}>
-      <div className={styles.line}></div>
-      <div className={styles.logoWrapper}>
-        <div className={styles.logoBox}>
-          <div className={styles.iconWrapper}>
-            <img src='Vector.png'></img>
-            {/* <div className={styles.iconContainer}>
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                className={styles.icon}
-              >
-                <path
-                  d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-                />
-                <path d="M9 22V12h6v10" />
-              </svg>
-            </div> */}
+    <div className="mt-5 flex items-center justify-center w-full p-4 gap-8" >
+      <div className="h-[3px] w-[38%] bg-gray-300"></div>
+      <div className="flex justify-center items-center">
+        <div className="w-24 h-24 bg-red-500 rounded-md flex justify-center items-center">
+          <div className="flex justify-center items-center">
+            <img src='Vector.png' className=" p-7" />
           </div>
         </div>
       </div>
-      <div className={styles.line}></div>
-    </div>
+      <div className="h-[3px] w-[38%] bg-gray-300"></div>
+    </div >
+
   )
 }
 export default MiddleLineLogo;
