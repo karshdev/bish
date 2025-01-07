@@ -36,8 +36,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(150px, 1fr));
-  /* Two columns, min 150px width */
+  grid-template-columns: 1fr;
   gap: 0.125rem;
   /* Micro gap of 2px */
 }
@@ -56,7 +55,7 @@
 }
 
 .iconContainer {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .cardTitle {
@@ -83,17 +82,21 @@
   background-color: #ff7aa2;
 }
 
+.checkIcon {
+  height: 80%;
+  width: 85%;
+  object-fit: contain;
+}
+
 /* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
+@media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.125rem;
+    /* Consistent micro gap for both directions */
   }
 
   .card {
-    height: 119px;
+    height: 12px;
   }
 }
-
-@media screen and (max-width: 600px) {}
-
-@media screen and (max-width: 400px) {}

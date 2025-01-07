@@ -1,6 +1,6 @@
 .navbar {
   height: 10%;
-  width: 100%;
+  width: 100;
   /* border: 2px solid black; */
 }
 
@@ -17,4 +17,21 @@
 
 .logo img {
   width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    height: auto;
+  }
+
+  .logo {
+    width: 80%;
+    margin-left: 0;
+    margin: 25px;
+
+  }
+
+  .logo img {
+    width: 100%;
+  }
 }

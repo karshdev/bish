@@ -58,3 +58,27 @@ p {
   margin: 2px;
   font-weight: 700;
 }
+
+@media screen and (max-width: 768px) {
+  .testimonialSection {
+    margin-top: 30px;
+  }
+
+  .heading {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    margin-left: 30px;
+    margin-top: 35%;
+  }
+
+  .testimonialContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {}
+
+@media screen and (max-width: 400px) {}

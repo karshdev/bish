@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet ');
 
 .container {
-  height: 117vh;
+  /* height: 117vh; */
   width: 100%;
   background-color: #FB2A6333;
 }
@@ -62,23 +62,22 @@
 }
 
 .textBox {
-  height: 250px;
+  height: 100%;
   width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
   /* border: 2px solid black; */
-  position: absolute;
-  left: 12%;
-  top: 18%;
-  background-color: white;
   z-index: 10;
   border-radius: 4.5%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
 }
 
 .parent {
   /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .heading {
@@ -110,7 +109,7 @@
   height: auto;
   margin-left: 11%;
   bottom: 15%;
-  position: absolute;
+
 }
 
 .addressBox {
@@ -119,8 +118,8 @@
   border-radius: 15px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
   text-align: center;
-  height: 100%;
-  width: 100%;
+  /* height: 200px; */
+  width: 297px;
 }
 
 .topText {
@@ -160,16 +159,10 @@
 }
 
 .bishCard3 {
-  position: absolute;
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   /* padding: 24px; */
-  max-width: 400px;
-  margin-top: 3%;
-  text-align: left;
-  top: 80%;
-  left: 11%;
   width: 28%;
   padding: 12px;
 }
@@ -215,5 +208,101 @@
 
 .bishArrow3 {
   margin-left: 8px;
+
   font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .textBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+  }
+
+  /* For tablets or medium devices */
+  .rightSection {
+    display: none;
+  }
+
+  .rightSection img {
+    display: none;
+    /* margin: auto; */
+  }
+
+  .container {
+    background-color: white;
+  }
+
+  .bishCard3 {
+    width: 320px;
+    top: 100%;
+    left: 30px;
+    background-color: #F6F6F6;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  /* For smartphones, including iPhone 14 Pro Max */
+  .rightSection img {
+    display: none;
+  }
+
+  .mobileImgContainer {
+    display: none;
+  }
+
+  /* .bishCard3 {
+    width: 344px;
+    position: relative;
+    top: 100%;
+    left: 43px;
+  } */
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f0f0f0; */
+    width: 90%;
+    height: auto;
+    margin-left: 11%;
+    bottom: 15%;
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  /* For extra small phones */
+  .rightSection img {
+    display: none;
+  }
+
+  .addressBox {
+    background-color: #ff3b7d;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+  }
+
+
+  .bishCard3 {
+    width: 372px;
+
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f0f0f0; */
+    width: 90%;
+    height: auto;
+    margin-left: 11%;
+    bottom: 15%;
+    position: absolute;
+  }
 }
