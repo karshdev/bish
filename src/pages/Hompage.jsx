@@ -52,7 +52,7 @@ function Homepage() {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-[70%] relative z-[-10] right-0 md:absolute md:top-0">
+        <div className="w-[96.5%] md:w-[70%] relative z-[-10] right-0 md:absolute md:top-0">
           <img src="Vector 2.png" className="w-full h-full object-cover" />
           <img
             src="Vector3.png"

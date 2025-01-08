@@ -1,6 +1,6 @@
 const Yellowbox = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="flex justify-center items-center min-h-screen md:mx-12">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
         <div className="bg-[#EEF973] w-full rounded-sm shadow-md p-6 text-center aspect-square flex flex-col items-center justify-around text-lg font-bold text-black">
           <div className="mt-2 flex justify-center">

@@ -1,6 +1,5 @@
 import styles from './FeatureGrid2.module.css';
-import React from 'react';
-import { MapPin, Clock, Wrench, Calendar } from 'lucide-react';
+import { MapPin, Wrench } from 'lucide-react';
 
 const FeatureGrid2 = () => {
   const features = [
@@ -29,11 +28,11 @@ const FeatureGrid2 = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-2">
+      <div className="flex w-full justify-center gap-2 items-center">
         {features.map((feature, index) => (
           <div
             key={index}
-            className={`flex rounded-md flex-col items-center justify-center text-center p-4 transition-transform duration-200 aspect-[1.35] h-[200px] w-[170px] ${feature.bgColor}`}
+            className={`flex rounded-md flex-col items-center justify-center text-center p-4 transition-transform duration-200 aspect-[1.35] h-[200px] w-[170px] md:h-[300px] md:w-[250px] ${feature.bgColor}`}
           >
             <div className="mb-4 w-full flex justify-center">
               <img src="Group 4721.png" className="h-[60px] w-[60px] object-contain" />

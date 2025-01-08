@@ -8,12 +8,12 @@ const Faq = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center mt-6">
+    <div className="flex flex-col justify-center mt-6 mb-4">
       <h2 className="text-2xl md:text-3xl font-bold text-center">FAQ</h2>
 
-      <div className="mt-4 space-y-4 mx-4">
+      <div className="mt-4 space-y-4 mx-2 md:mx-48">
         <div
-          className="p-4 rounded-md shadow cursor-pointer"
+          className="p-4 cursor-pointer border-b-2 border-gray-400"
           onClick={() => handleItemClick(1)}
         >
           <div className="flex justify-between items-center">
@@ -47,7 +47,7 @@ const Faq = () => {
 
         {/* Accordion Item 2 */}
         <div
-          className="p-4 rounded-md shadow cursor-pointer"
+          className="p-4 border-b-2 border-gray-400 cursor-pointer"
           onClick={() => handleItemClick(2)}
         >
           <div className="flex justify-between items-center">
@@ -81,7 +81,7 @@ const Faq = () => {
 
         {/* Accordion Item 3 */}
         <div
-          className="p-4 rounded-md shadow cursor-pointer"
+          className="p-4 border-b-2 border-gray-400 cursor-pointer"
           onClick={() => handleItemClick(3)}
         >
           <div className="flex justify-between items-center">

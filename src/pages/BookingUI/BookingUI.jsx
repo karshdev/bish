@@ -8,8 +8,8 @@ const BookingUI = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="max-w-6xl md:max-w-[92%] mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:my-16">
         {/* Left Section */}
         <div className="flex flex-col bg-gray-100 p-6 rounded-md">
           <h1 className="text-2xl md:text-3xl text-center font-bold text-gray-900">
