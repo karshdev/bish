@@ -5,7 +5,7 @@ import { MapPin, Clock, Wrench, Calendar } from 'lucide-react';
 const FeatureGrid = () => {
   const features = [
     {
-      icon: <MapPin size={40} />, // Reduced icon size
+      icon: <MapPin size={32} />, // Reduced icon size
       title: "Local and Reliable",
       bgColor: styles.yellowBg,
     },
@@ -27,13 +27,13 @@ const FeatureGrid = () => {
   ];
 
   return (
-    <div className="w-full max-w-lg mx-auto p-4">
+    <div className="w-full max-w-lg md:max-w-[70%] mx-auto p-4">
       <div className="text-center mb-10">
-        <h1 className="text-2xl font-extrabold font-raleway mb-2">
+        <h1 className="text-[24px] md:text-[30px] leading-[28px] md:leading-[50px] lg:text-[44px] font-bold mb-2">
           Get your home's BISH! code and book a discounted
           expert in minutes
         </h1>
-        <p className="text-lg font-raleway font-normal">
+        <p className="text-lg md:text-[28px] mt-4 font-normal">
           Relax, BISH! traderspeople are...
         </p>
       </div>
