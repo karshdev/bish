@@ -35,7 +35,7 @@ function PostCode() {
       </div>
       <div className="flex justify-center items-center mt-8 w-full sm:w-1/2 flex-col gap-9">
         <button
-          className="flex items-center justify-between w-full max-w-[300px] sm:max-w-[400px] px-4 sm:px-6 py-2 bg-pink-500 text-white text-lg font-medium rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+          className="flex items-center justify-between w-full max-w-[300px] sm:max-w-[400px] px-4 sm:px-6 py-2 bg-[#FB2A63] text-white text-lg font-medium rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
           style={{ filter: "drop-shadow(1px 2px 3px black)" }}
         >
           <div className="w-full flex items-center justify-center">

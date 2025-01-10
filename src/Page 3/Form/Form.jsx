@@ -82,7 +82,7 @@ const Form = () => {
               <input
                 type="tel"
                 id="mobile"
-                className="border-[1px] border-[#E2E2E2] pl-10 block w-full rounded-md shadow-sm focus:border-pink-500 focus:ring-pink-500 sm:text-sm h-10 bg-[#F6F6F6]"
+                className="border-[1px] border-[#E2E2E2] pl-10 block w-full rounded-md shadow-sm  sm:text-sm h-10 bg-[#F6F6F6]"
                 onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
               />
             </div>
@@ -91,7 +91,7 @@ const Form = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full sm:w-1/2 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-pink-500 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 transition-colors duration-200 font-raleway m-auto"
+            className="w-full sm:w-1/2 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#FB2A63]  focus:outline-none focus:ring-2 focus:ring-offset-2  transition-colors duration-200 font-raleway m-auto"
           >
             Check if BISH! codes are available
           </button>
