@@ -1,5 +1,7 @@
 import Navbar from "./Navbar/Navbar";
 import { ArrowRight } from "lucide-react";
+import { Link } from 'react-router-dom';
+import Page3Contaier from "../Page 3/Page3Container";
 
 function Homepage() {
   return (
@@ -26,7 +28,9 @@ function Homepage() {
               </p>
               <div className="relative">
                 <button className="bg-white w-full text-black text-[16px] md:text-[22px] font-semibold py-2 px-8 rounded-full shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center">
-                  Find your address
+                  <Link to="/Page3" className="w-full h-full flex justify-center items-center">
+                    Find your address
+                  </Link>
                 </button>
                 <span className="absolute flex items-center top-[6px] md:top-2 right-2 md:right-3 bg-black rounded-full h-[28px] w-[28px] md:h-[34px] md:w-[34px] text-white">
                   <ArrowRight className="w-full p-1 md:p-0" />
@@ -53,7 +57,7 @@ function Homepage() {
           </div>
         </div>
         <div className="w-[96.5%] md:w-[70%] relative z-[-10] right-0 md:absolute md:top-0">
-          <img src="Vector 2.png" className="w-full h-full object-cover" />
+          <img src="Vector 2.png" className="w-full h-full" />
           <img
             src="Vector3.png"
             className="absolute top-0 left-5 w-[98%] h-[95%] object-cover"
