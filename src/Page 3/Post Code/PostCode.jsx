@@ -79,7 +79,7 @@ function PostCode() {
         // disabled={loading}
         >
           <div className="w-full flex items-center justify-center">
-            <span className="font-bold font-raleway"> c
+            <span className="font-bold font-raleway">
               {/* {loading ? "Loading..." : "Find Address"} */}
               Find Address
             </span>
