@@ -1,19 +1,16 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
+import { useFormContext } from '../../Context/FormContext';
+
 
 const Form = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    mobile: ''
-  });
+
+  // const { formData, updateFormData } = useFormContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
   };
-
   return (
     <div className="flex items-center justify-center p-4 mt-[2%]">
       <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[60%] space-y-6 bg-white p-8 rounded-lg">
@@ -28,10 +25,11 @@ const Form = () => {
                 <img src="inputIcon.png" className="h-[20px]" />
               </span>
               <input
+                required
                 type="text"
                 id="firstName"
                 className="border-[1px] border-[#E2E2E2] pl-10 block w-full rounded-md shadow-sm focus:border-pink-500 focus:ring-pink-500 sm:text-sm h-10 bg-[#F6F6F6]"
-                onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+              // onChange={(e) => updateFormData({ firstName: e.target.value })}
               />
             </div>
           </div>
@@ -42,10 +40,11 @@ const Form = () => {
               Last Name
             </label>
             <input
+              required
               type="text"
               id="lastName"
               className="border-[1px] border-[#E2E2E2] mt-1 block w-full rounded-md shadow-sm focus:border-pink-500 focus:ring-pink-500 sm:text-sm h-10 bg-[#F6F6F6]"
-              onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+            // onChange={(e) => updateFormData({ lastName: e.target.value })}
             />
           </div>
 
@@ -61,10 +60,11 @@ const Form = () => {
                 </svg>
               </span>
               <input
+                required
                 type="email"
                 id="email"
                 className="border-[1px] border-[#E2E2E2] pl-10 block w-full rounded-md shadow-sm focus:border-pink-500 focus:ring-pink-500 sm:text-sm h-10 bg-[#F6F6F6]"
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              // onChange={(e) => updateFormData({ email: e.target.value })}
               />
             </div>
           </div>
@@ -81,25 +81,27 @@ const Form = () => {
                 </svg>
               </span>
               <input
+
                 type="tel"
                 id="mobile"
+                required
                 className="border-[1px] border-[#E2E2E2] pl-10 block w-full rounded-md shadow-sm  sm:text-sm h-10 bg-[#F6F6F6]"
-                onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
+              // onChange={(e) => updateFormData({ mobile: e.target.value })}
               />
             </div>
           </div>
 
           {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full sm:w-1/2 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#FB2A63]  focus:outline-none focus:ring-2 focus:ring-offset-2  transition-colors duration-200 font-raleway m-auto"
-          >
-            Check if BISH! codes are available
-          </button>
+          <Link to='/Page4'>
+            <button
+              type="submit"
+              className="w-full sm:w-1/2 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#FB2A63]  focus:outline-none focus:ring-2 focus:ring-offset-2  transition-colors duration-200 font-raleway mt-[20px] mx-auto"
+            >
+              Check if BISH! codes are available
+            </button></Link>
         </form>
       </div>
     </div>
   );
 };
-
 export default Form;

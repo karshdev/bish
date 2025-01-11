@@ -13,6 +13,7 @@ import Footer from "./pages/Footer/Footer";
 import Page1Container from "./pages/Page1Container";
 import Page3Contaier from "./Page 3/Page3Container";
 import Page4Container from "./Page 4/Page4Container";
+import { FormProvider } from "./Context/FormContext";
 
 function App() {
   // Dynamically inject Google Fonts
@@ -26,9 +27,11 @@ function App() {
 
     <Router>
       <Routes>
+
         <Route path="/" element={<Page1Container />} />
         <Route path="/Page3" element={<Page3Contaier />} />
         <Route path="/Page4" element={<Page4Container />} />
+
       </Routes>
     </Router>
 
