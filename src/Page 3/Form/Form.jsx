@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 
 const Form = () => {
@@ -14,7 +15,7 @@ const Form = () => {
   };
 
   return (
-    <div className="flex items-center justify-center p-4">
+    <div className="flex items-center justify-center p-4 mt-[2%]">
       <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[60%] space-y-6 bg-white p-8 rounded-lg">
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* First Name */}
@@ -89,12 +90,16 @@ const Form = () => {
           </div>
 
           {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full sm:w-1/2 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-pink-500 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 transition-colors duration-200 font-raleway m-auto"
-          >
-            Check if BISH! codes are available
-          </button>
+          <Link to="/Page4">
+            <button
+              type="submit"
+              className="w-full sm:w-1/2 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-pink-500 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 transition-colors duration-200 font-raleway
+              mt-[20px] mx-auto"
+            >
+              Check if BISH! codes are available
+            </button>
+          </Link>
+
         </form>
       </div>
     </div>

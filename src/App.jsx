@@ -28,7 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Page1Container />} />
         <Route path="/Page3" element={<Page3Contaier />} />
-        {/* <Route path="/Page4" element={<Page4Container />} /> comment kar isko */}
+        <Route path="/Page4" element={<Page4Container />} />
       </Routes>
     </Router>
 
