@@ -21,7 +21,7 @@ function Page1Container() {
       <MiddleLineLogo />
       <FeatureGrid2 />
       <CheckPrice />
-      <Yellowbox />
+     <Yellowbox />
       <Faq />
       <Footer />
     </div>

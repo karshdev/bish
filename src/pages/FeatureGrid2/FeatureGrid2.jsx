@@ -1,4 +1,3 @@
-import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation } from 'swiper/modules';
@@ -58,7 +57,7 @@ const FeatureGrid2 = () => {
         {features.map((feature, index) => (
           <SwiperSlide key={index}>
             <div
-              className={`w-f md:w-[280px] h-[240px] md:h-80 rounded-lg flex flex-col items-center justify-center cursor-pointer mx-auto ${feature.bgColor}`} // Adjusted width for mobile screens
+              className={`w-f md:w-[280px] h-[198px] md:h-80 rounded-lg flex flex-col items-center justify-center cursor-pointer mx-auto ${feature.bgColor}`} // Adjusted width for mobile screens
             >
               <div className="mb-4 md:mb-8">
                 <div>
