@@ -7,7 +7,7 @@ import PostCode from "./Post Code/PostCode";
 import SingleBox from "./SingleBox/SingleBox";
 import TownDropdown from "./Town Dropdown/TownDropdown";
 
-function Page3Contaier() {
+function Page3Container() {
   return (
     <div>
       <HeroSection />
@@ -21,4 +21,4 @@ function Page3Contaier() {
     </div>
   )
 }
-export default Page3Contaier;
+export default Page3Container;
