@@ -5,7 +5,7 @@ import { useFormContext } from '../../Context/FormContext';
 
 const Form = () => {
 
-  // const { formData, updateFormData } = useFormContext();
+  const { formData, updateFormData } = useFormContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,7 +29,7 @@ const Form = () => {
                 type="text"
                 id="firstName"
                 className="border-[1px] border-[#E2E2E2] pl-10 block w-full rounded-md shadow-sm focus:border-pink-500 focus:ring-pink-500 sm:text-sm h-10 bg-[#F6F6F6]"
-              // onChange={(e) => updateFormData({ firstName: e.target.value })}
+                onChange={(e) => updateFormData({ firstName: e.target.value })}
               />
             </div>
           </div>
@@ -44,7 +44,7 @@ const Form = () => {
               type="text"
               id="lastName"
               className="border-[1px] border-[#E2E2E2] mt-1 block w-full rounded-md shadow-sm focus:border-pink-500 focus:ring-pink-500 sm:text-sm h-10 bg-[#F6F6F6]"
-            // onChange={(e) => updateFormData({ lastName: e.target.value })}
+              onChange={(e) => updateFormData({ lastName: e.target.value })}
             />
           </div>
 
@@ -64,7 +64,7 @@ const Form = () => {
                 type="email"
                 id="email"
                 className="border-[1px] border-[#E2E2E2] pl-10 block w-full rounded-md shadow-sm focus:border-pink-500 focus:ring-pink-500 sm:text-sm h-10 bg-[#F6F6F6]"
-              // onChange={(e) => updateFormData({ email: e.target.value })}
+                onChange={(e) => updateFormData({ email: e.target.value })}
               />
             </div>
           </div>
@@ -86,7 +86,7 @@ const Form = () => {
                 id="mobile"
                 required
                 className="border-[1px] border-[#E2E2E2] pl-10 block w-full rounded-md shadow-sm  sm:text-sm h-10 bg-[#F6F6F6]"
-              // onChange={(e) => updateFormData({ mobile: e.target.value })}
+                onChange={(e) => updateFormData({ mobile: e.target.value })}
               />
             </div>
           </div>

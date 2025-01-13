@@ -16,6 +16,8 @@ export const FormProvider = ({ children }) => {
     mobile: ''
   });
 
+  const [address, setAddress] = useState("");
+  const [postValue, setPostValue] = useState("")
   const updateFormData = (data) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -24,7 +26,7 @@ export const FormProvider = ({ children }) => {
   };
 
   return (
-    <FormContext.Provider value={{ formData, updateFormData }}>
+    <FormContext.Provider value={{ formData, updateFormData, setAddress, address, postValue, setPostValue }}>
       {children}
     </FormContext.Provider>
   );

@@ -1,3 +1,4 @@
+
 function SingleBox() {
   return (
     <div className="flex justify-center items-center mt-[20px] p-5">
