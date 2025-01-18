@@ -1,6 +1,7 @@
 // src/contexts/FormContext.js
 
 import React, { createContext, useState, useContext } from 'react';
+import { use } from 'react';
 
 const FormContext = createContext();
 
@@ -16,8 +17,11 @@ export const FormProvider = ({ children }) => {
     mobile: ''
   });
 
+  // console.log(formData, "contextForm")
   const [address, setAddress] = useState("");
-  const [postValue, setPostValue] = useState("")
+  const [postDropDown, setPostDropDown] = useState("");
+
+
   const updateFormData = (data) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -26,7 +30,7 @@ export const FormProvider = ({ children }) => {
   };
 
   return (
-    <FormContext.Provider value={{ formData, updateFormData, setAddress, address, postValue, setPostValue }}>
+    <FormContext.Provider value={{ formData, updateFormData, setAddress, address, postDropDown, setPostDropDown }}>
       {children}
     </FormContext.Provider>
   );

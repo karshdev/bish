@@ -9,31 +9,31 @@ function PostCode() {
   const [data, setData] = useState([]); // To store fetched data
   const [showDiv, closeDiv] = useState(true);
   const { address, setAddress } = useFormContext();
-  const { postValue, setPostValue } = useFormContext();
+  // const { postValue, setPostValue } = useFormContext();
+  const { postDropDown } = useFormContext()
 
   const dropDownDiv = (value) => {
     closeDiv(false);
     setAddress(value);
-    console.log("Address selected:", value);
+    // console.log("Address selected:", value);
   };
-
   const fetchAddress = async () => {
     if (!postcode.trim()) {
       alert("Please enter a postcode");
       return;
     }
+    console.log("postDropDown", postDropDown);
+    console.log("postcode", postcode);
+
 
     // Validate first two characters of `postValue` against `postcode`
     if (
-      postValue?.substring(0, 2).toUpperCase() !==
-      postcode?.substring(0, 2).toUpperCase()
+      postDropDown?.substring(0, 2).toUpperCase() !== postcode?.substring(0, 2).toUpperCase()
     ) {
       alert("Selected Town and Postcode do not match");
       return;
     }
-
     setLoading(true); // Start loading
-
     try {
       const response = await fetch(
         `https://ws.postcoder.com/pcw/${apikey}/pafaddressbase/${encodeURIComponent(

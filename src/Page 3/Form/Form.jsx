@@ -7,10 +7,26 @@ const Form = () => {
 
   const { formData, updateFormData } = useFormContext();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
+  const handleSubmit = async (e) => {
+    try {
+      const response = await fetch('https://backend-bish-ig0p.onrender.com/api/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        console.log("Form Submitted Successfully");
+      }
+      else {
+        console.log('not')
+      }
+    } catch (error) {
+      console.log(error)
+    }
   };
+
   return (
     <div className="flex items-center justify-center p-4 mt-[2%]">
       <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[60%] space-y-6 bg-white p-8 rounded-lg">
