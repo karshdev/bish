@@ -1,32 +1,24 @@
-import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useFormContext } from '../../Context/FormContext';
 
 
 const Form = () => {
-
-  const { formData, updateFormData } = useFormContext();
+  const { formData, updateFormData, address} = useFormContext();
+  const navigate=useNavigate()
 
   const handleSubmit = async (e) => {
-    try {
-      const response = await fetch('https://backend-bish-ig0p.onrender.com/api/users', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      if (response.ok) {
-        console.log("Form Submitted Successfully");
-      }
-      else {
-        console.log('not')
-      }
-    } catch (error) {
-      console.log(error)
+    e.preventDefault();
+  
+    const { first_name, last_name, email, mobile } = formData;
+  
+    if (!first_name || !last_name || !email || !mobile || !address) {
+      alert("Please fill all the fields and select an address before proceeding.");
+      return;
     }
-  };
+    navigate("/Page4")
 
+  };
+  
   return (
     <div className="flex items-center justify-center p-4 mt-[2%]">
       <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[60%] space-y-6 bg-white p-8 rounded-lg">
@@ -45,7 +37,7 @@ const Form = () => {
                 type="text"
                 id="firstName"
                 className="border-[1px] border-[#E2E2E2] pl-10 block w-full rounded-md shadow-sm focus:border-pink-500 focus:ring-pink-500 sm:text-sm h-10 bg-[#F6F6F6]"
-                onChange={(e) => updateFormData({ firstName: e.target.value })}
+                onChange={(e) => updateFormData({ first_name: e.target.value })}
               />
             </div>
           </div>
@@ -60,7 +52,7 @@ const Form = () => {
               type="text"
               id="lastName"
               className="border-[1px] border-[#E2E2E2] mt-1 block w-full rounded-md shadow-sm focus:border-pink-500 focus:ring-pink-500 sm:text-sm h-10 bg-[#F6F6F6]"
-              onChange={(e) => updateFormData({ lastName: e.target.value })}
+              onChange={(e) => updateFormData({ last_name: e.target.value })}
             />
           </div>
 
@@ -97,7 +89,6 @@ const Form = () => {
                 </svg>
               </span>
               <input
-
                 type="tel"
                 id="mobile"
                 required
@@ -108,16 +99,16 @@ const Form = () => {
           </div>
 
           {/* Submit Button */}
-          <Link
-            to="/Page4"
+          <button
             type="submit"
-            className="w-full sm:w-1/2 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#FB2A63]  focus:outline-none focus:ring-2 focus:ring-offset-2  transition-colors duration-200 font-raleway m-auto"
+            className={`w-full sm:w-1/2 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#FB2A63] focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200 font-raleway m-auto`}
           >
-            Check if BISH! codes are available
-          </Link>
+           Check if BISH! codes are available
+          </button>
         </form>
       </div>
     </div>
   );
 };
+
 export default Form;

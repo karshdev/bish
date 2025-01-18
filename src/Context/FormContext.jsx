@@ -1,7 +1,7 @@
 // src/contexts/FormContext.js
 
-import React, { createContext, useState, useContext } from 'react';
-import { use } from 'react';
+import { createContext, useState, useContext } from 'react';
+
 
 const FormContext = createContext();
 
@@ -11,15 +11,15 @@ export const useFormContext = () => {
 
 export const FormProvider = ({ children }) => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    first_name: '',
+    last_name: '',
     email: '',
     mobile: ''
   });
 
-  // console.log(formData, "contextForm")
+
   const [address, setAddress] = useState("");
-  const [postDropDown, setPostDropDown] = useState("");
+  const [postDropDown, setPostDropDown] = useState({});
 
 
   const updateFormData = (data) => {

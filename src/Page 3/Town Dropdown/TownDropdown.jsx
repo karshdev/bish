@@ -1,12 +1,15 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useFormContext } from "../../Context/FormContext";
 
 function TownDropdown() {
   const { setPostDropDown } = useFormContext();
   const [dropdownData, setDropdown] = useState();
+  const [selectedPostalCode, setSelectedPostalCode] = useState("");
 
-  const handleSubmit = (value) => {
-    setPostDropDown(value);
+  const handleSubmit = (postalCode) => {
+    setSelectedPostalCode(postalCode);
+    const selectedObject = dropdownData.find(item => item.postalCode === postalCode);
+    setPostDropDown(selectedObject);
   };
 
   const fetchPostCode = async () => {
@@ -27,9 +30,10 @@ function TownDropdown() {
       console.log("Fetched Address Data:", data);
       setDropdown(data?.data);
 
-      // Automatically set the first value after fetching the data
+      // Automatically set the first complete object after fetching the data
       if (data?.data?.length > 0) {
-        setPostDropDown(data.data[0].postalCode);
+        setSelectedPostalCode(data.data[0].postalCode);
+        setPostDropDown(data.data[0]);
       }
     } catch (error) {
       console.error("Error fetching address:", error);
@@ -62,8 +66,8 @@ function TownDropdown() {
         <div className="relative">
           <select
             className="w-full appearance-none border border-gray-300 bg-gray-100 text-black text-[14px] sm:text-[16px] lg:text-[18px] p-3 rounded-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-500"
-            onChange={(e) => handleSubmit(e.target.value)} // Trigger on change event
-            value={dropdownData?.[0]?.postalCode || ""} // Set default value to the first option
+            onChange={(e) => handleSubmit(e.target.value)}
+            value={selectedPostalCode}
           >
             {dropdownData?.map((value, index) => (
               <option key={index} value={value?.postalCode}>

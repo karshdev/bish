@@ -4,40 +4,45 @@ import { useFormContext } from "../../Context/FormContext";
 const apikey = 'PCWVP-Q8SMV-977GV-J33D3';
 
 function PostCode() {
-  const [postcode, setPostcode] = useState(""); // To store user input
-  const [loading, setLoading] = useState(false); // To manage loading state
-  const [data, setData] = useState([]); // To store fetched data
-  const [showDiv, closeDiv] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
+  const [showDiv, setShowDiv] = useState(true);
+  const [inputValue, setInputValue] = useState(""); 
   const { address, setAddress } = useFormContext();
-  // const { postValue, setPostValue } = useFormContext();
-  const { postDropDown } = useFormContext()
+  const { postDropDown } = useFormContext();
 
   const dropDownDiv = (value) => {
-    closeDiv(false);
+    setShowDiv(false);
     setAddress(value);
-    // console.log("Address selected:", value);
+    setInputValue(value); // Update input value with full address
+    setData([]);
   };
+
+  const handleInputChange = (e) => {
+    const newValue = e.target.value.toUpperCase();
+    setInputValue(newValue);
+    setAddress(newValue);
+    setShowDiv(true);
+  };
+
   const fetchAddress = async () => {
-    if (!postcode.trim()) {
+    if (!inputValue?.trim()) {
       alert("Please enter a postcode");
       return;
     }
-    console.log("postDropDown", postDropDown);
-    console.log("postcode", postcode);
 
-
-    // Validate first two characters of `postValue` against `postcode`
     if (
-      postDropDown?.substring(0, 2).toUpperCase() !== postcode?.substring(0, 2).toUpperCase()
+      postDropDown?.postalCode?.substring(0, 2).toUpperCase() !== inputValue?.substring(0, 2).toUpperCase()
     ) {
       alert("Selected Town and Postcode do not match");
       return;
     }
-    setLoading(true); // Start loading
+
+    setLoading(true);
     try {
       const response = await fetch(
         `https://ws.postcoder.com/pcw/${apikey}/pafaddressbase/${encodeURIComponent(
-          postcode
+          inputValue
         )}`,
         {
           method: "GET",
@@ -51,13 +56,13 @@ function PostCode() {
 
       const addressData = await response.json();
       console.log("Fetched Address:", addressData || "Address not found");
-      setData(addressData); // Update the state with fetched data
-      closeDiv(true); // Ensure the dropdown is visible when new data arrives
+      setData(addressData);
+      setShowDiv(true);
     } catch (error) {
       console.error(error);
       alert("Error fetching address. Please try again later.");
     } finally {
-      setLoading(false); // End loading
+      setLoading(false);
     }
   };
 
@@ -87,16 +92,14 @@ function PostCode() {
           <input
             type="text"
             placeholder="W2 4EB"
-            value={postcode}
-            onChange={(e) => setPostcode(e.target.value.toUpperCase())}
+            value={inputValue}
+            onChange={handleInputChange}
             className="w-full pl-16 appearance-none border border-gray-300 bg-gray-100 text-black text-[14px] sm:text-[16px] lg:text-[18px] p-3 rounded-md cursor-text focus:outline-none focus:ring-2"
           />
 
           {/* Dropdown */}
           {showDiv && data?.length > 0 && (
-            <div
-              className="absolute top-full mt-2 w-full bg-white shadow-md rounded-md max-h-60 overflow-y-auto z-10"
-            >
+            <div className="absolute top-full mt-2 w-full bg-white shadow-md rounded-md max-h-60 overflow-y-auto z-10">
               {data.map((item, index) => (
                 <div
                   key={index}
