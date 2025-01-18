@@ -28,7 +28,7 @@ function Homepage() {
               </p>
               <div className="relative">
                 <button className="bg-white w-full text-black text-[16px] md:text-[22px] font-semibold py-2 px-8 rounded-full shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center">
-                  <Link to="/Page3" className="w-full h-full flex justify-center items-center">
+                  <Link to="/address" className="w-full h-full flex justify-center items-center">
                     Find your address
                   </Link>
                 </button>

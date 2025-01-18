@@ -21,8 +21,8 @@ function App() {
       <Routes>
 
         <Route path="/" element={<Page1Container />} />
-        <Route path="/Page3" element={<Page3Container />} />
-        <Route path="/Page4" element={<Page4Container />} />
+        <Route path="/address" element={<Page3Container />} />
+        <Route path="/send-bish" element={<Page4Container />} />
 
       </Routes>
     </Router>

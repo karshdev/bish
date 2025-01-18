@@ -15,7 +15,7 @@ const Form = () => {
       alert("Please fill all the fields and select an address before proceeding.");
       return;
     }
-    navigate("/Page4")
+    navigate("/send-bish")
 
   };
   

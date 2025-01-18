@@ -17,7 +17,7 @@ function SendMailSms() {
 
     if (!first_name || !last_name || !email || !mobile || !address) {
       alert("Please fill all the fields and select the address on the previous page.");
-      navigate("/Page3");
+      navigate("/address");
       return; // Stop further execution
     }
   
