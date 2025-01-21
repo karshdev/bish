@@ -9,7 +9,7 @@ function PostCode() {
   const [showDiv, setShowDiv] = useState(true);
   const [inputValue, setInputValue] = useState(""); 
   const { address, setAddress } = useFormContext();
-  const { postDropDown } = useFormContext();
+  const { postDropDown } = useFormContext()
 
   const dropDownDiv = (value) => {
     setShowDiv(false);
