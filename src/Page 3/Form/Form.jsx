@@ -6,6 +6,7 @@ const Form = () => {
   const { formData, updateFormData, address} = useFormContext();
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
+  const [countryCode, setCountryCode] = useState('+41');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -89,19 +90,39 @@ const Form = () => {
             <label htmlFor="mobile" className="block text-sm font-medium text-gray-700">
               Mobile
             </label>
-            <div className="mt-1 relative">
-              <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
-                <svg className="h-5 w-5 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-              </span>
-              <input
-                type="tel"
-                id="mobile"
-                required
-                className="border-[1px] border-[#E2E2E2] pl-10 block w-full rounded-md shadow-sm  sm:text-sm h-10 bg-[#F6F6F6]"
-                onChange={(e) => updateFormData({ mobile: e.target.value })}
-              />
+            <div className="mt-1 flex">
+              {/* Country Code Dropdown */}
+              <div className="relative mr-2 w-[100px]">
+                <select
+                  value={countryCode}
+                  onChange={(e) => setCountryCode(e.target.value)}
+                  className="absolute z-10 top-0 left-0 h-10 w-full opacity-0"
+                >
+                  <option value="+41">🇬🇧 +41</option>
+                </select>
+                <div className="border-[1px] border-[#E2E2E2] rounded-md flex items-center justify-center h-10 w-full bg-[#F6F6F6] pointer-events-none">
+                  <span className="mr-1">🇬🇧</span>
+                  <span>{countryCode}</span>
+                </div>
+              </div>
+              
+              {/* Mobile Input */}
+              <div className="relative flex-grow">
+                <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
+                  <svg className="h-5 w-5 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </span>
+                <input
+                  type="tel"
+                  id="mobile"
+                  required
+                  className="border-[1px] border-[#E2E2E2] pl-10 block w-full rounded-md shadow-sm sm:text-sm h-10 bg-[#F6F6F6]"
+                  onChange={(e) => updateFormData({ 
+                    mobile: `${countryCode}${e.target.value}`
+                  })}
+                />
+              </div>
             </div>
           </div>
 
