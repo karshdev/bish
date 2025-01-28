@@ -1,5 +1,4 @@
 
-import { Heading2 } from "lucide-react";
 import CheckBox from "../Page 3/Check Box/CheckBox";
 import HeadingPage4 from "./Heading/Heading";
 import HeroSectionPage4 from "./Hero Section Page 4/HeroSectionPage4";

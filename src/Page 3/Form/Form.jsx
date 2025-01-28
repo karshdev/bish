@@ -6,7 +6,7 @@ const Form = () => {
   const { formData, updateFormData, address} = useFormContext();
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
-  const [countryCode, setCountryCode] = useState('+41');
+  const [countryCode, setCountryCode] = useState('+44');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -98,7 +98,7 @@ const Form = () => {
                   onChange={(e) => setCountryCode(e.target.value)}
                   className="absolute z-10 top-0 left-0 h-10 w-full opacity-0"
                 >
-                  <option value="+41">🇬🇧 +41</option>
+                  <option value="+44">🇬🇧 +44</option>
                 </select>
                 <div className="border-[1px] border-[#E2E2E2] rounded-md flex items-center justify-center h-10 w-full bg-[#F6F6F6] pointer-events-none">
                   <span className="mr-1">🇬🇧</span>
